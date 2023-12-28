@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+.home-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        display: unset;
+    }
+}
+
+.home-text-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-left: 15px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        margin-left: 15;
+        width: 100%;
+        height: 300px;
+    }
+}
+
+.text-hello {
+    font-size: 35px;
+    font-weight: 300;
+    text-align: left;
+
+    @media (max-width: 768px) {
+        font-size: 24px;
+    }
+} 
+
+.home-title {
+    font-size: 95px;
+    font-weight: 800;
+    text-align: left;
+    overflow: hidden;
+    white-space: pre-line;
+
+    @media (max-width: 768px) {
+        font-size: 60px;
+    }
+}
+
+.role-title-color {
+    color: $blue-color;
+}
+
+.home-image-container {
+    text-align: right;
+    display: flex;
+    height: 330px;
+    width: 380px;
+
+    @media (max-width: 768px) {
+        text-align: center;
+        justify-content: center;
+        height: 300px;
+        width: 300px;
+    }
+}
+
+.home-image {
+    height: 320px;
+    width: 340px;
+    border-radius: 50%;
+    margin-right: 80px;
+
+    @media (max-width: 768px) {
+        width: 150px;
+        max-height: 150px;
+        border-radius: 50%;
+        margin-right: 0;
+    }
+}
+
+
+

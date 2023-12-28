@@ -1,0 +1,15 @@
+.footer-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 30px;
+   width: 100%;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+}
+
+.footer-para {
+   font-weight: 300;
+   font-size: 12px;
+}

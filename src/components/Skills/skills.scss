@@ -1,0 +1,51 @@
+@import '../../variables.scss';
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-icons {
+    width: 100%;
+    display: grid;
+    gap: 35px;
+    text-align: center;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 768px) {
+        width: 100%;
+        display: grid;
+        gap: 12px;
+        text-align: center;
+        justify-content: center;
+        padding-top: 16px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.icon {
+    width: 80px;
+    margin: 0 auto;
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 60px;
+    }
+}
+
+.icon:hover {
+    transform: scale(1.2);
+}
+
+.icon-para {
+    font-size: 17px;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
+}

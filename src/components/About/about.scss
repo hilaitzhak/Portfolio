@@ -1,0 +1,26 @@
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: normal !important;
+    }
+}
+
+.aboutPara {
+    font-size: 20px;
+    font-weight: normal;
+    padding: 5px 0;
+    max-width: 700px;
+    letter-spacing: 0.2px;
+    line-height: 1.6;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}

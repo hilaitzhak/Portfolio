@@ -1,0 +1,43 @@
+@import  '../../variables.scss';
+
+.navbar {
+    background: rgb(30, 30, 30);
+    height: 80px;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+
+    .menu-items {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        .menu-list-item {
+            margin: 0 13px;
+
+            &:hover {
+                color: $silver-color;
+                padding-bottom: 8px;
+                border-bottom: 3px solid $silver-color;
+            }
+        }        
+    }
+
+    .menu-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+}
+
+.active {
+    color: $silver-color;
+    padding-bottom: 8px;
+    border-bottom: 3px solid $silver-color;
+}
+
+.active-menu-icon {
+    color: $blue-color;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $blue-color;
+}

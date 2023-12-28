@@ -1,0 +1,152 @@
+@import '../../variables.scss';
+
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+    }
+}
+
+.all-projects-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.project-container {
+    width: 290px;
+    height: 330px;
+    margin: 0 30px 0 30px;
+    background: rgba(85, 79, 79, 0.58);
+    box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+    border-radius: 17px;
+    cursor: pointer;
+    transition: all 0.5s;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 10px auto;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+.project-container:hover {
+border: 1px solid $white-color;
+transform: scale(1.05);
+}
+
+.project-container:active {
+    transform: scale(0.95);
+}
+
+.project-img-container {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.project-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    opacity: 1;
+    border: 1.5px solid $silver-color;
+
+    @media (max-width: 768px) {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.project-subtitle {
+    margin: 5px;
+    color: $silver-color;
+    font-size: 20px;
+    font-weight: bold;
+
+    @media (max-width: 768px) {
+        font-size: 15px;
+    }
+}
+
+.project-para {
+    width: 280px;
+    height: 55px;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 400;
+    color: $white-color;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        font-size: 12px;
+        height:auto;
+    }
+}
+
+.btn-container {
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btn {
+    font-weight: 600;
+    padding: 15px;
+    width: 100px;
+    border-radius: 32px;
+    color: $blue-color;
+    border-color: $silver-color;
+    margin-right: 10px;
+
+    @media (max-width: 768px) {
+        padding: 5px;
+        width: 120px;
+        margin: 5px 0;
+        font-size: 12px;
+    }
+}
+
+
+.btn-color-1, .btn-color-2 {
+    border: $silver-color 1.6px solid;
+}
+
+.btn-color-1:hover, .btn-color-2:hover {
+    cursor: pointer;
+    background: $blue-color;
+    color: $white-color;
+}

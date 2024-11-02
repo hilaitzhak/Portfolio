@@ -16,7 +16,7 @@ function AppProjects() {
         image: urlShortener,
         description: "A URL shortener site makes long web links shorter, more manageable links.",
         githubUrl: "https://github.com/hilaitzhak/URL_Shortener",
-        demoUrl: "https://url.hilaitzhak.com",
+        demoUrl: "https://url-shortener.hilaitzhak.com",
       },
       {
         title: "Portfolio",

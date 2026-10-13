@@ -1,0 +1,127 @@
+/* ============================================================
+   Hila Itzhak — Portfolio Redesign · "Ink & Signal"
+   Editorial-premium. Monochrome base + single cobalt signal.
+   Light & dark via [data-theme]. Instrument Serif / Space Grotesk / JetBrains Mono.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-sans: 'Space Grotesk', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --signal: #2f54ff;          /* cobalt accent */
+  --signal-soft: rgba(47, 84, 255, 0.12);
+  --available: #18b368;
+
+  --maxw: 1080px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+}
+
+/* ---- Dark (default) ---- */
+[data-theme='dark'] {
+  --bg: #0a0a0b;
+  --bg-elev: #121214;
+  --bg-elev-2: #17171a;
+  --text: #ededec;
+  --text-mid: #b6b6ba;
+  --text-dim: #76767c;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.20);
+  --signal: #6f86ff;
+  --signal-ink: #0a0a0b;
+  --signal-soft: rgba(111, 134, 255, 0.14);
+  --shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.7);
+  --grain-opacity: 0.05;
+}
+
+/* ---- Light ---- */
+[data-theme='light'] {
+  --bg: #f3f1ea;
+  --bg-elev: #fbfaf6;
+  --bg-elev-2: #ffffff;
+  --text: #16151a;
+  --text-mid: #46454d;
+  --text-dim: #76747e;
+  --line: rgba(0, 0, 0, 0.11);
+  --line-strong: rgba(0, 0, 0, 0.22);
+  --signal: #2447e6;
+  --signal-ink: #ffffff;
+  --signal-soft: rgba(36, 71, 230, 0.10);
+  --shadow: 0 24px 60px -28px rgba(40, 38, 30, 0.4);
+  --grain-opacity: 0.035;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background 0.5s var(--ease), color 0.5s var(--ease);
+}
+
+::selection { background: var(--signal); color: var(--signal-ink); }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3, h4 { margin: 0; font-weight: 400; }
+
+.mono {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+.serif { font-family: var(--font-display); font-weight: 400; line-height: 1.02; }
+.italic { font-style: italic; }
+
+.signal-text { color: var(--signal); }
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+.section { padding: 100px 0; border-top: 1px solid var(--line); }
+.section:first-of-type { border-top: none; }
+
+.sec-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px; }
+.sec-num { font-family: var(--font-mono); font-size: 12px; color: var(--signal); letter-spacing: 0.1em; }
+.sec-title { font-family: var(--font-display); font-size: clamp(32px, 5vw, 52px); line-height: 1; }
+.sec-rule { flex: 1; height: 1px; background: var(--line); align-self: center; }
+
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.7s var(--ease), transform 0.7s var(--ease); }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 9px; border: 2px solid var(--bg); }
+
+@media (max-width: 720px) {
+  .section { padding: 64px 0; }
+}

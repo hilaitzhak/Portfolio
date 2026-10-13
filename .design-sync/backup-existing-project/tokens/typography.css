@@ -1,0 +1,38 @@
+/* ============================================================
+   TYPOGRAPHY — Hila Itzhak portfolio
+   Poiret One = thin, airy display for hero & section titles.
+   Inter      = workhorse body, taglines, UI, chips.
+   ============================================================ */
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Poiret One', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* ---- Display / section-title scale (Poiret One) ---- */
+  --text-hero: 95px;        /* home headline */
+  --text-section: 90px;     /* "About", "Projects" section titles */
+  --text-section-sm: 55px;  /* mobile section title */
+  --text-hello: 35px;       /* "Hello," eyebrow */
+
+  /* ---- Body / UI scale (Inter) ---- */
+  --text-tagline: 22px;     /* hero sub-line */
+  --text-lead: 19px;        /* about paragraphs */
+  --text-base: 16px;        /* default body, buttons */
+  --text-sm: 15px;          /* inputs, links, project copy */
+  --text-xs: 13px;          /* fact labels, icon captions */
+  --text-2xs: 12px;         /* tag chips, footer */
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+
+  /* ---- Line-height & tracking ---- */
+  --leading-tight: 1.1;
+  --leading-snug: 1.5;
+  --leading-relaxed: 1.7;
+  --tracking-label: 1px;    /* uppercase fact labels */
+  --tracking-wide: 0.2px;
+}

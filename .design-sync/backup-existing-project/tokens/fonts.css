@@ -1,0 +1,4 @@
+/* Webfonts — Poiret One (display) + Inter (body), loaded from Google Fonts.
+   The portfolio links these via <link> in index.html; here we @import so the
+   design-system closure ships them to consumers. */
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=Inter:wght@400;500;600;700;800&display=swap');

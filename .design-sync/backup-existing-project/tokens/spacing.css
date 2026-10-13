@@ -1,0 +1,35 @@
+/* ============================================================
+   SPACING, RADII, SHADOWS, MOTION — Hila Itzhak portfolio
+   Base rhythm is 8 / 16 / 32 (from variables.scss).
+   ============================================================ */
+:root {
+  /* ---- Spacing scale ---- */
+  --space-2xs: 4px;
+  --space-xs: 8px;    /* $space-sm */
+  --space-sm: 12px;
+  --space-md: 16px;   /* $space-md */
+  --space-lg: 24px;
+  --space-xl: 32px;   /* $space-lg */
+  --space-2xl: 48px;
+
+  /* ---- Radii ---- */
+  --radius-sm: 10px;   /* inputs, project thumbnails */
+  --radius-md: 14px;   /* fact cards */
+  --radius-lg: 17px;   /* project cards */
+  --radius-pill: 32px; /* CTA buttons */
+  --radius-chip: 20px; /* tag chips */
+  --radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --shadow-card: 12px 17px 51px rgba(0, 0, 0, 0.22);  /* project card lift */
+  --shadow-float: 0 6px 18px rgba(0, 0, 0, 0.35);     /* scroll-to-top FAB */
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --dur-fast: 0.2s;
+  --dur: 0.25s;
+  --dur-slow: 0.4s;
+  --dur-reveal: 0.7s;
+  --lift: -2px;        /* button hover */
+  --lift-card: -6px;   /* card hover */
+}

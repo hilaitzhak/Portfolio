@@ -1,15 +1,22 @@
-import AppNavbar from "./components/NavBar/navbar";
-import AppFooter from "./components/Footer/footer";
-import AppContent from "./components/content/content";
-import './App.scss';
+import './redesign/portfolio.css';
+import { Nav, Hero, About } from './redesign/SectionsTop';
+import { Experience, Skills, Work } from './redesign/SectionsWork';
+import { Contact, Footer } from './redesign/SectionsContact';
 
 function App() {
   return (
-    <div className="app-warpper">
-      <AppNavbar/>
-        <AppContent/>
-      <AppFooter/>
-    </div>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Work />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
 }
 

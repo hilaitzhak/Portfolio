@@ -18,7 +18,7 @@ export function Experience() {
         "Built the platform's customer notifications end to end (Java, React, AWS SES): fraud-rule and report email alerts, \"What's New\" product announcements, and alerts when a customer's traffic stops, all outside the real-time fraud checks.",
         'Owned login security and access control (JWT, 2FA, roles and permissions UI) and real-time device identification used to spot fraudulent users.',
         "Built the fraud analysts' widget dashboard (React, TypeScript) on per-minute summary tables, each widget loading on its own.",
-        "Co-built the team's shared AI-agent skills (Claude Code, Gemini): 44 skills for code review, testing and repo conventions.",
+        "Co-built the team's shared AI-agent skills: 44 skills for code review, testing and repo conventions, used across Claude Code, Codex and Gemini.",
         "Lead the team's Scrum process as Scrum Master (pre-planning, sprint planning, retrospectives), and built an AI sprint dashboard from Jira and GitHub that tracks progress and flags security alerts.",
       ],
       tags: ['Java', 'Spring Boot', 'Python', 'RabbitMQ', 'PostgreSQL', 'OpenSearch', 'Redis', 'React', 'TypeScript', 'AWS'],

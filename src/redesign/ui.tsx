@@ -4,6 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 export function scrollToId(id: string) {
   if (id === 'top') { window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
   const el = document.getElementById(id);
+  // On the case-study view the sections aren't rendered: go back to the main page first.
+  if (!el && window.location.hash) { window.location.hash = ''; setTimeout(() => scrollToId(id), 50); return; }
   if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 72, behavior: 'smooth' });
 }
 
@@ -50,11 +52,6 @@ export function Btn({ children, variant = 'primary', as: Tag = 'button', icon, s
   );
 }
 
-/** Mono eyebrow label (amber). */
-export function Mono({ children, style = {} }: { children?: React.ReactNode; style?: React.CSSProperties }) {
-  return <span className="mono" style={style}>{children}</span>;
-}
-
 /** Mono tag chip for tech-stack / category labels. */
 export function Tag({ children }: { children?: React.ReactNode }) {
   return <span className="chip">{children}</span>;
@@ -97,11 +94,10 @@ export function Reveal({ children, className = '', style = {}, delay = 0, as: Ta
   return <Tag ref={ref} className={`reveal ${className}`} style={style}>{children}</Tag>;
 }
 
-/** Numbered section header: "01." + title. */
-export function SecHead({ num, title }: { num: string; title: string }) {
+/** Section header. */
+export function SecHead({ title }: { title: string }) {
   return (
     <Reveal className="sec-head">
-      <span className="sec-num">{num}</span>
       <h2 className="sec-title">{title}</h2>
     </Reveal>
   );

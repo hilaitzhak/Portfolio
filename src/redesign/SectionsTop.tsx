@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Btn, Mono, Reveal, SecHead, Icon, scrollToId } from './ui';
+import { Btn, Reveal, SecHead, Icon, scrollToId } from './ui';
 
 const SOCIALS: [keyof typeof Icon, string][] = [
   ['github', 'https://github.com/hilaitzhak'],
@@ -9,7 +9,7 @@ const SOCIALS: [keyof typeof Icon, string][] = [
 
 // ============================ NAV ============================
 export function Nav() {
-  const links = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
+  const links = ['About', 'Highlights', 'Experience', 'Skills', 'Projects', 'Contact'];
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('');
 
@@ -73,15 +73,16 @@ export function Hero() {
       <div className="wrap" style={{ width: '100%' }}>
         <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1.25fr 1fr', gap: 56, alignItems: 'center' }}>
           <div>
-            <Reveal><Mono style={{ display: 'block', marginBottom: 20 }}>hello, my name is</Mono></Reveal>
             <Reveal delay={80}>
-              <h1 style={{ fontSize: 'clamp(44px, 7vw, 72px)', lineHeight: 1.05, marginBottom: 24 }}>Hila Itzhak.</h1>
+              <h1 style={{ fontSize: 'clamp(44px, 7vw, 72px)', lineHeight: 1.05, marginBottom: 14 }}>Hila Itzhak.</h1>
+            </Reveal>
+            <Reveal delay={110}>
+              <h2 style={{ fontSize: 'clamp(24px, 3.5vw, 34px)', lineHeight: 1.2, color: 'var(--muted-fg)', marginBottom: 24 }}>Software Engineer</h2>
             </Reveal>
             <Reveal delay={140}>
               <p style={{ fontSize: 18, color: 'var(--muted-fg)', maxWidth: 540, lineHeight: 1.7, marginBottom: 34 }}>
-                I'm a Full Stack Developer based in Israel, specialising in enterprise,
-                production-grade web applications — from backend services to modern
-                frontend interfaces.
+                I build a fraud-detection platform for banks and fintechs, from Java and
+                Python services and event-driven pipelines to React and TypeScript interfaces.
               </p>
             </Reveal>
             <Reveal delay={200}>
@@ -129,9 +130,9 @@ function CodeCard() {
       <pre style={{ margin: 0, padding: 22, fontFamily: 'var(--font-mono)', fontSize: 14, lineHeight: 1.8, overflowX: 'auto' }}>
         <code>
           <span style={{ color: amber }}>const</span> <span style={{ color: fg }}>hila</span> <span style={{ color: 'var(--muted-fg)' }}>= {'{'}</span>{'\n'}
-          {'  '}<span style={{ color: blue }}>role</span><span style={{ color: 'var(--muted-fg)' }}>: </span><span style={{ color: green }}>"Full Stack Dev"</span><span style={{ color: 'var(--muted-fg)' }}>,</span>{'\n'}
-          {'  '}<span style={{ color: blue }}>stack</span><span style={{ color: 'var(--muted-fg)' }}>: [</span><span style={{ color: green }}>"TS"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"React"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"Node"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"AWS"</span><span style={{ color: 'var(--muted-fg)' }}>],</span>{'\n'}
-          {'  '}<span style={{ color: blue }}>focus</span><span style={{ color: 'var(--muted-fg)' }}>: </span><span style={{ color: green }}>"Clean, scalable apps"</span>{'\n'}
+          {'  '}<span style={{ color: blue }}>role</span><span style={{ color: 'var(--muted-fg)' }}>: </span><span style={{ color: green }}>"Software Engineer"</span><span style={{ color: 'var(--muted-fg)' }}>,</span>{'\n'}
+          {'  '}<span style={{ color: blue }}>stack</span><span style={{ color: 'var(--muted-fg)' }}>: [</span><span style={{ color: green }}>"Java"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"Python"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"TS"</span><span style={{ color: 'var(--muted-fg)' }}>, </span><span style={{ color: green }}>"React"</span><span style={{ color: 'var(--muted-fg)' }}>],</span>{'\n'}
+          {'  '}<span style={{ color: blue }}>focus</span><span style={{ color: 'var(--muted-fg)' }}>: </span><span style={{ color: green }}>"Secure, event-driven systems"</span>{'\n'}
           <span style={{ color: 'var(--muted-fg)' }}>{'}'};</span>
         </code>
       </pre>
@@ -151,22 +152,22 @@ export function About() {
   return (
     <section id="about" className="section">
       <div className="wrap">
-        <SecHead num="01." title="About me" />
+        <SecHead title="About me" />
         <div className="about-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: 56, alignItems: 'start' }}>
           <div>
             <Reveal>
               <p style={{ color: 'var(--muted-fg)', fontSize: 17, lineHeight: 1.8, marginBottom: 20 }}>
-                Full Stack Developer with hands-on experience across the entire web stack — from
-                backend architecture and database design to responsive, user-friendly interfaces.
-                I focus on writing clean, maintainable code, building secure systems, and
-                collaborating effectively with cross-functional teams.
+                Software engineer at Paygilant, where I own features end to end on a
+                fraud-detection platform used by banks and fintechs: Java and Python services,
+                RabbitMQ pipelines, databases, and the React interfaces analysts work in every day.
+                I care about secure, maintainable code and systems that hold up in production.
               </p>
             </Reveal>
             <Reveal delay={80}>
               <p style={{ color: 'var(--muted-fg)', fontSize: 17, lineHeight: 1.8 }}>
-                I hold a B.Sc. in Computer Science from the Holon Institute of Technology. I'm
-                passionate about learning new technologies and taking on challenges that push me
-                to grow as a developer.
+                I also lead the team's Scrum process and build AI-assisted tooling with Claude
+                Code and Gemini. I hold a B.Sc. in Computer Science from the Holon
+                Institute of Technology.
               </p>
             </Reveal>
           </div>

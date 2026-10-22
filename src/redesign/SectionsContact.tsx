@@ -1,5 +1,5 @@
 import React from 'react';
-import { Btn, Mono, Reveal, Icon, scrollToId } from './ui';
+import { Btn, Reveal, Icon, scrollToId } from './ui';
 
 const email = 'hila87219@gmail.com';
 
@@ -8,14 +8,13 @@ export function Contact() {
   return (
     <section id="contact" className="section" style={{ textAlign: 'center' }}>
       <div className="wrap" style={{ maxWidth: 640 }}>
-        <Reveal><Mono style={{ display: 'block', marginBottom: 16 }}>05. What's next?</Mono></Reveal>
         <Reveal delay={80}>
           <h2 style={{ fontSize: 'clamp(36px, 6vw, 56px)', lineHeight: 1.1, marginBottom: 22 }}>Get in touch</h2>
         </Reveal>
         <Reveal delay={140}>
           <p style={{ color: 'var(--muted-fg)', fontSize: 17, lineHeight: 1.7, marginBottom: 36 }}>
             I'm always open to interesting conversations, new opportunities, or collaboration on
-            enterprise web projects. Drop me a line and I'll get back to you.
+            interesting engineering work. Drop me a line and I'll get back to you.
           </p>
         </Reveal>
         <Reveal delay={200}>

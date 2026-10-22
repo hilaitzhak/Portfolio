@@ -31,8 +31,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-s3": "aws s3 sync build/ s3://portfolio.hilaitzhak.com",
-    "deploy": "npm run build && npm run deploy-s3"
+    "deploy-s3": "aws s3 sync build/ s3://portfolio.hilaitzhak.com --delete --profile personal",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id EW246WFH1VGTA --paths \"/*\" --profile personal",
+    "deploy": "npm run build && npm run deploy-s3 && npm run invalidate"
   },
   "eslintConfig": {
     "extends": [

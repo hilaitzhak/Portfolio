@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Tag, SecHead, Reveal, Icon } from './ui';
-import { CASE_STUDY_HASH } from './CaseStudy';
 
 // ============================ EXPERIENCE ============================
 interface Job {
@@ -14,13 +13,13 @@ export function Experience() {
       blurb: 'Fraud-detection platform for banks and fintechs',
       date: 'March 2025 - Present',
       points: [
-        'Designed and owned a new customer reporting system (Python, RabbitMQ) across 12 production environments, making reports up to 60% faster.',
-        'Built fraud-rule email alerts that run outside the real-time fraud checks (RabbitMQ), and a detector that flags customer channels that stop sending traffic.',
-        'Owned login security (JWT, 2FA, role-based access) and real-time device identification used to spot fraudulent users.',
+        "Designed and led the move of customer reports from cron jobs inside each customer's database to a central Python service (RabbitMQ) with a new React UI, rolled out safely behind a feature flag and making reports up to 60% faster.",
         "Co-built the analysts' portal from scratch (React/TypeScript UI and backend APIs), replacing a legacy portal whose filters used to crash the database.",
-        "Built features end to end (database, APIs, UI), like a \"What's New\" center, and dashboard charts on per-minute summary tables, each loading independently.",
+        "Built the platform's customer notifications end to end (Java, React, AWS SES): fraud-rule and report email alerts, \"What's New\" product announcements, and alerts when a customer's traffic stops, all outside the real-time fraud checks.",
+        'Owned login security and access control (JWT, 2FA, roles and permissions UI) and real-time device identification used to spot fraudulent users.',
+        "Built the fraud analysts' widget dashboard (React, TypeScript) on per-minute summary tables, each widget loading on its own.",
         "Co-built the team's shared AI-agent skills (Claude Code, Gemini): 44 skills for code review, testing and repo conventions.",
-        "Lead the team's Scrum process (pre-planning, sprint planning, retrospectives), and built an AI sprint dashboard from Jira and GitHub that tracks progress and flags security alerts.",
+        "Lead the team's Scrum process as Scrum Master (pre-planning, sprint planning, retrospectives), and built an AI sprint dashboard from Jira and GitHub that tracks progress and flags security alerts.",
       ],
       tags: ['Java', 'Spring Boot', 'Python', 'RabbitMQ', 'PostgreSQL', 'OpenSearch', 'Redis', 'React', 'TypeScript', 'AWS'],
     },
@@ -59,39 +58,6 @@ export function Experience() {
                   ))}
                 </ul>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>{j.tags.map((t) => <Tag key={t}>{t}</Tag>)}</div>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// ============================ HIGHLIGHTS ============================
-export function Highlights() {
-  const items: [string, string, string, string?][] = [
-    ['60% faster', 'Customer reporting system', 'Designed and owned a new reporting pipeline (Python, RabbitMQ) running across 12 production environments.', CASE_STUDY_HASH],
-    ['From scratch', "Analysts' portal", 'Co-built the React/TypeScript UI and backend APIs that replaced a legacy portal whose filters crashed the database.'],
-    ['44 skills', 'Shared AI-agent skills', "Co-built the team's Claude Code and Gemini skills for code review, testing and repo conventions."],
-    ['Jira + GitHub', 'AI sprint dashboard', 'Built a dashboard that tracks sprint progress and flags security alerts for the team.'],
-  ];
-  return (
-    <section id="highlights" className="section">
-      <div className="wrap">
-        <SecHead title="Highlights" />
-        <div className="skills-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
-          {items.map(([stat, title, desc, link], i) => (
-            <Reveal key={title} delay={i * 70}>
-              <div className="card" style={{ padding: 26, height: '100%' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontSize: 30, fontWeight: 700, color: 'var(--primary)', marginBottom: 8 }}>{stat}</div>
-                <h3 style={{ fontSize: 18, fontWeight: 600, marginBottom: 10 }}>{title}</h3>
-                <p style={{ color: 'var(--muted-fg)', fontSize: 15, lineHeight: 1.65 }}>{desc}</p>
-                {link && (
-                  <a href={link} className="proj-link" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, marginTop: 14, fontSize: 14, fontWeight: 500, color: 'var(--primary)', textDecoration: 'none' }}>
-                    Read the case study {Icon.arrow(14)}
-                  </a>
-                )}
               </div>
             </Reveal>
           ))}

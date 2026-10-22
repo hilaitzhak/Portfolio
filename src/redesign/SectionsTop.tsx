@@ -9,7 +9,7 @@ const SOCIALS: [keyof typeof Icon, string][] = [
 
 // ============================ NAV ============================
 export function Nav() {
-  const links = ['About', 'Highlights', 'Experience', 'Skills', 'Projects', 'Contact'];
+  const links = ['About', 'Experience', 'Skills', 'Projects', 'Contact'];
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState('');
 

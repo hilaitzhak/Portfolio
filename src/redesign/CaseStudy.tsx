@@ -24,7 +24,7 @@ export function CaseStudy() {
     <main>
       <section className="section">
         <div className="wrap" style={{ maxWidth: 820 }}>
-          <a href="#highlights" onClick={(e) => { e.preventDefault(); scrollToId('highlights'); }} className="cs-back"
+          <a href="#experience" onClick={(e) => { e.preventDefault(); scrollToId('experience'); }} className="cs-back"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, color: 'var(--muted-fg)', fontSize: 14, textDecoration: 'none', marginBottom: 32 }}>
             <span style={{ display: 'inline-flex', transform: 'rotate(180deg)' }}>{Icon.arrow(14)}</span> Back
           </a>

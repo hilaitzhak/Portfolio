@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './redesign/portfolio.css';
 import { Nav, Hero, About } from './redesign/SectionsTop';
-import { Highlights, Experience, Skills, Work } from './redesign/SectionsWork';
+import { Experience, Skills, Work } from './redesign/SectionsWork';
 import { Contact, Footer } from './redesign/SectionsContact';
 import { CaseStudy, CASE_STUDY_HASH } from './redesign/CaseStudy';
 
@@ -20,7 +20,6 @@ function App() {
         <main>
           <Hero />
           <About />
-          <Highlights />
           <Experience />
           <Skills />
           <Work />

@@ -107,7 +107,7 @@ export function Work() {
       title: 'Easy Tasty Fun',
       desc: 'A recipe app with built-in AI (Claude API): scan a recipe from a photo, ask what you can cook with what you have, get substitutions and chat about any recipe. Google sign-in, Redis caching, S3 image uploads, Hebrew and English.',
       tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'Redis', 'AWS S3', 'Claude API'],
-      github: 'https://github.com/hilaitzhak/EasyTastyFun', live: 'https://recipes.hilaitzhak.com',
+      live: 'https://recipes.hilaitzhak.com',
     },
     {
       title: 'URL Shortener',
